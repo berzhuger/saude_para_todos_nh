@@ -7,8 +7,12 @@
     {{ end }}
     {{ block "endHead" . }}{{ end }}
     </head>
-    <body class="preload">
+    <body class="">
         {{ block "initBody" . }}{{ end }}
+
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0&appId=373686706111347&autoLogAppEvents=1"></script>
+        
         <div id="page">
             {{ block "header" . }}{{- partial "header.html" . -}}{{ end }}
             <div id="content">

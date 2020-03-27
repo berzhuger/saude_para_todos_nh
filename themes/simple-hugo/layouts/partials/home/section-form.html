@@ -10,11 +10,11 @@
                 <form action="">
                     <div class="form-group">
                         <label for="">Seu Nome</label>
-                        <input type="email" class="form-control form-control-lg" id="" placeholder="Nome">
+                        <input type="text" required class="form-control form-control-lg" id="" placeholder="Nome">
                     </div>
                     <div class="form-group">
                         <label for="">Seu Email</label>
-                        <input type="email" class="form-control form-control-lg" id="" placeholder="Email">
+                        <input type="email" required class="form-control form-control-lg" id="" placeholder="Email">
                     </div>
                     <div class="form-group">
                         <label for="">Bairro</label>
@@ -23,11 +23,17 @@
                     </div>
                     <div class="form-group">
                         <label for="">Demanda</label>
-                        <textarea class="form-control" id="" rows="5" placeholder="Escreva aqui sua demanda..."></textarea>
+                        <textarea required class="form-control" id="" rows="5" placeholder="Escreva aqui sua demanda..."></textarea>
                     </div>
 
                     <div class="text-center">
                         <button type="submit" class="btn btn-success btn-lg">ENVIAR DEMANDA</button>
+                    </div>
+
+                    <div class="feedback-envio">
+                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                        <div class="alert alert-success">Sua demanda foi enviada com sucesso, obrigado! <br> Lhe retornaremos o mais breve possível.</div>
+                        <div class="alert alert-danger">Oops, ocorreu um erro no envio. Tente novamente mais tarde.</div>
                     </div>
 
                 </form>

@@ -22,6 +22,7 @@ $yellow-theme: #f9ca24;
 @import 'section-demandas';
 @import 'section-form';
 @import 'section-infos';
+@import 'footer';
 
 h1, h2, h3, h4, h5{
     font-family: $font-display;
@@ -118,9 +119,4 @@ h1, h2, h3, h4, h5{
             }
         }
     }
-}
-
-footer{
-    @include bg-theme;
-
 }

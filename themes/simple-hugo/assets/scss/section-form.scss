@@ -44,9 +44,26 @@
         padding: 1.1em 1.6em;
 
         &:hover{
+          @media(hover: hover) and (pointer: fine) {
             opacity: .45;
+          }
         }
         
+    }
+
+    .alert{
+      text-align: center;
+      border:none;
+      color: #fff;
+      font-style: 1.2rem;
+      font-family: $font-display;
+
+      &.alert-success{
+        background: #2ecc71;
+      }
+      &.alert-danger{
+        background:#e74c3c;
+      }
     }
 }
 

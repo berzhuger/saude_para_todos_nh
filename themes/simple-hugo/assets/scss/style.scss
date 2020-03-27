@@ -18,10 +18,12 @@ $yellow-theme: #f9ca24;
 @import './bootstrap/bootstrap';
 // END Bootstrap
 
+@import 'modal-form';
 @import 'sections';
 @import 'section-demandas';
 @import 'section-form';
 @import 'section-infos';
+@import 'section-share';
 @import 'footer';
 
 h1, h2, h3, h4, h5{
@@ -98,12 +100,24 @@ h1, h2, h3, h4, h5{
             margin-top:$padding-header;
             padding: 0;
             text-align: center;
+
             li{
                 display: inline-block;
                 list-style: none;
                 margin: .3em;
 
+                @include media-breakpoint-down(sm){
+                    display: block;
+
+                    a{
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        letter-spacing: .046em;
+                    }
+                }
+
                 a{
+                    display: block;
                     color: #fff;
                     padding:.6em;
                     background: rgba(255,255,255,0.15);
@@ -113,10 +127,46 @@ h1, h2, h3, h4, h5{
 
                     &:hover{
                         text-decoration: none;
-                        opacity: .4;
+
+                        @media(hover: hover) and (pointer: fine) {
+                            opacity: .4;
+                        }
                     }
                 }
             }
         }
     }
+}
+
+#buttonGoTop{
+    display: inline-block;
+    background-color: #FF9800;
+    width:  50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+
+    @include media-breakpoint-down(xs){
+        right: 15px;
+        bottom: 15px;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    svg{
+        fill:#fff;
+        margin-top: 12px;
+    }
+
 }

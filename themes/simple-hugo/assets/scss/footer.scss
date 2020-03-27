@@ -1,0 +1,90 @@
+footer{
+    @include bg-theme;
+    padding: 5em 0;
+
+    @include media-breakpoint-down(xs){
+        padding-bottom: 80px;
+
+    }
+
+    ul.medias-anchors{
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style: none;
+            margin: 1.5em 0;
+
+            a{
+                color: rgba(255,255,255,.9);
+                display: block;
+                transition: all .3s ease;
+                font-family: $font-display;
+                
+
+                @include flexbox;
+                @include align-items(center);
+
+                &:hover{
+                    text-decoration: none;
+                    opacity: .45;
+                }
+
+                .icon-media{
+                    margin-right: 15px;
+
+                    svg{
+                        fill: rgba(255,255,255,.9);
+                        height: 48px;
+                        width:  48px;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    ul.nav-footer{
+        margin: 0;        
+        margin-top: 1em;    
+        margin-bottom: 2em;    
+        padding: 0;
+
+        li{
+            list-style: none;
+            margin: .5em 0;
+
+            a{
+                color: rgba(255,255,255,.9);
+                display: block;
+                transition: all .3s ease;
+                font-family: $font-display;
+                font-size: .92em;
+
+                &:hover{
+                    text-decoration: none;
+                    opacity: .45;
+                }
+
+            }
+        }
+    }
+
+    .producao{
+        padding-top: 5rem;
+        font-size: .92em;
+        color: rgba(255,255,255,.75);
+        font-family: $font-display;
+        letter-spacing: .042em;
+    }
+
+    .wrapper-widget-fc .fb-page{       
+        iframe{
+            background: rgba(255,255,255,.45);
+            min-height: 100px;
+        }
+
+    }
+
+}

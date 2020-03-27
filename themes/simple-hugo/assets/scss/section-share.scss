@@ -1,0 +1,51 @@
+$size-button: 48px;
+
+.section-share{
+    padding-top: 0;
+
+}
+
+.wrapper-btns-share{
+
+    text-align: center;
+
+    .button-share-media{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: $size-button;
+        width: $size-button;
+        padding: 5px;
+        background: currentColor;
+        transition: all .3s ease;
+
+        &:hover{
+            opacity: .45;
+        }
+
+        &:before{
+            content: "";
+            position: absolute;
+            display: block;
+            width:  $size-button - 10px;
+            height: $size-button - 10px;
+            top:    5px;
+            left:   5px;
+            background: #fff;
+            z-index: 1;
+        }
+        
+        svg{
+            position: relative;
+            width:  $size-button - 10px;
+            height: $size-button - 10px;
+            fill: currentColor;
+            z-index: 2;
+        }
+
+        &-facebook{ color: #3b5998;}
+        &-twitter{  color: #1da1f2;}
+        &-linkedin{ color: #0077b5;}
+        &-whatsapp{ color: #4dc247;}
+    }
+}

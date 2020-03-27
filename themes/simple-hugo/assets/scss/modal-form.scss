@@ -1,0 +1,18 @@
+.modal-form{
+    .modal-header{
+        .modal-title{
+            color: $blue-theme;
+        }
+    }
+    .modal-body{
+        padding: 0;
+    }
+
+    .section-form{
+        padding: 1.2em;
+
+        select option{
+            color: #555;
+        }
+    }
+}

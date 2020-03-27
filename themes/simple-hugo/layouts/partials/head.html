@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+{{- $title := (default .Title (default .Params.meta.title)) }}
+{{- if $title }}{{ $title = print $title " - " .Site.Title }}{{else}}{{$title = .Site.Title}}{{end}}
+{{- $description := .Params.meta.description }}
+<title>{{ $title }}</title>
+{{ range .Params.meta.tags }}{{if (and .name .content) }}<meta name="{{ chomp .name}}" content="{{ chomp .content }}" />{{- end}}{{end}}
+{{with $description}}<meta name="description" content="{{.}}" />{{end}}
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="/images/favicon.png" />
+{{- $mainStyle := resources.Get "scss/style.scss" | toCSS | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}" integrity="{{ $mainStyle.Data.Integrity }}" >
+<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->

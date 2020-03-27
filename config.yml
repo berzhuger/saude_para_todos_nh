@@ -1,0 +1,8 @@
+baseURL: "http://saudeparatodosnh.org/"
+languageCode: "pt-BR"
+title: "Saúde para todos - NH contra o coronavírus"
+theme: simple-hugo
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

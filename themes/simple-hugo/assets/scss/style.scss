@@ -1,0 +1,126 @@
+@import './bootstrap/bootstrap';
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,800&display=swap');
+
+
+$font-display: 'Raleway', sans-serif;
+
+$red-theme: #b92b27;
+$blue-theme: #1565C0;
+$green-theme: #4afcfe;
+$yellow-theme: #f9ca24;
+
+@import 'mixins';
+
+// Bootstrap
+@import "./bootstrap/_functions";
+@import "./bootstrap/_variables";
+@import './bootstrap/bootstrap';
+// END Bootstrap
+
+@import 'sections';
+@import 'section-demandas';
+@import 'section-form';
+@import 'section-infos';
+
+h1, h2, h3, h4, h5{
+    font-family: $font-display;
+    font-weight: bold;
+}
+
+.header{
+    $padding-header: 4rem;
+
+   @include bg-theme;
+   padding-top:   $padding-header;
+   padding-bottom:$padding-header;
+
+    .caption{
+        color: #fff;
+        text-align: center;
+        h1{
+            color: $yellow-theme;
+            text-transform: uppercase;
+            font-family: $font-display;
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+        h2{
+            color: $green-theme;
+            text-transform: uppercase;
+            font-family: $font-display;
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .divider{
+            height: 4px;
+            width: 240px;
+            margin: 2em auto;
+            background: #fff;
+        }
+
+        .slogan{
+            width: 100%;
+            max-width: 65vh;
+            margin-bottom: 2rem;
+        }
+
+        .subtext{            
+            margin: 0 auto;
+            margin-top: 1.4rem;
+            
+            @include media-breakpoint-up(lg){
+                max-width: 65%;
+
+                & > p{
+                    font-size: 1.6rem;
+                }
+            }
+            
+            & > p{
+                color: #fff;
+                font-size: 1.2rem;                
+
+                span{
+                    color: $yellow-theme;
+                }
+            }
+        }
+
+    }
+    
+    nav{
+        ul{
+            margin: 0 auto;
+            margin-top:$padding-header;
+            padding: 0;
+            text-align: center;
+            li{
+                display: inline-block;
+                list-style: none;
+                margin: .3em;
+
+                a{
+                    color: #fff;
+                    padding:.6em;
+                    background: rgba(255,255,255,0.15);
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                    transition: all .3s ease;
+
+                    &:hover{
+                        text-decoration: none;
+                        opacity: .4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    @include bg-theme;
+
+}

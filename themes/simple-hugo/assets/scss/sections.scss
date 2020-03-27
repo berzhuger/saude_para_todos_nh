@@ -1,0 +1,43 @@
+section{
+    padding: 6rem 0;
+    
+    // @include media-breakpoint-dow(lg){
+    //     padding: 3rem 0;
+    // }
+}
+
+.title-section{
+    text-align: center;
+    margin-bottom: 3em;
+
+    .divider{
+        height: 4px;
+        background: $green-theme;
+        width: 120px;
+        margin: 2em auto;
+    }
+    
+    @media (min-width: 960px){
+        max-width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2{
+        color: $blue-theme;
+        font-size: 2em;
+        font-weight: 800;  
+        letter-spacing: .046em;
+    }
+    h3{
+        font-weight: 500;  
+        font-size: 1.2em;
+    }
+}
+
+.section-solid{
+    .title-section{
+        h2{color: rgba(255,255,255,.8);}
+        h3{color: rgba(255,255,255,1);}
+    }
+}

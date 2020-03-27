@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    {{ block "initHead" . }}{{ end }}
+    {{ block "head" . }}
+        {{- partial "head.html" . -}}
+    {{ end }}
+    {{ block "endHead" . }}{{ end }}
+    </head>
+    <body class="preload">
+        {{ block "initBody" . }}{{ end }}
+        <div id="page">
+            {{ block "header" . }}{{- partial "header.html" . -}}{{ end }}
+            <div id="content">
+                {{- block "main" . }}{{- end }}
+            </div>
+            {{ block "footer" . }}{{- partial "footer.html" . -}}{{ end }}
+        </div>
+        {{ block "endBody" . }}{{ end }}
+        {{ partial "ending-scripts" . }}
+    </body>
+</html>

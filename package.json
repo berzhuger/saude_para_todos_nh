@@ -1,0 +1,17 @@
+{
+  "name": "covid19-demandas-nh",
+  "version": "1.0.0",
+  "description": "Covid-19 Demandas NH",
+  "repository": "none",
+  "main": "index.js",
+  "scripts": {
+    "build": "hugo --config=config.yml --minify",
+    "dev": "hugo server --disableFastRender --verbose --config=config.yml",
+    "hugo-ver": "hugo version"
+  },
+  "devDependencies": {
+    "hugo-bin": "^0.49.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

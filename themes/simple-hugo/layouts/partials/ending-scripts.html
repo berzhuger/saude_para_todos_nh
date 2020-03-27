@@ -1,0 +1,9 @@
+{{- $jsJQuery := resources.Get "javascript/jquery.js" -}}
+{{/* $jsPopper := resources.Get "javascript/popper.js" */}}
+{{- $jsBootstrap := resources.Get "javascript/bootstrap.js" -}}
+{{- $jsScript := resources.Get "javascript/script.js" -}}
+
+{{- $jsAll := slice $jsJQuery $jsBootstrap $jsScript -}}
+{{- $jsBundle := $jsAll | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint "sha512" -}}
+<script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
+<script>$(window).on('load', function(){ $("body").removeClass("preload"); });</script>

@@ -1,3 +1,56 @@
+<script>
+        function enviarEmail() {
+            console.log('teste');
+      
+      var dados = JSON.stringify({
+        "Messages": [
+          {
+            "From": {
+              "Email": "igornoia89@gmail.com",
+              "Name": "Igor"
+            },
+            "To": [
+              {
+                "Email": "igornoia89@gmail.com",
+                "Name": "Igor Viana do Amaral"
+              }
+            ],
+            "Subject": "teste",
+            "TextPart": "Vou te compra uma galinha.",
+            //"HTMLPart": "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
+            //"CustomID": "AppGettingStartedTest"
+          }
+        ]
+      });
+
+
+
+      var settings = {
+        // "async": true,
+        // "crossDomain": true,
+        
+        
+      }
+      
+      $.ajax({
+        url: "https://api.mailjet.com/v3.1/send",
+        method: "POST",
+        dataType: "json",
+        cors: true,
+        crossDomain: true,
+        headers: {
+          "content-type": "application/json",
+          "authorization": "Basic ODRhMmQzYTg1NmY1YzBlNTVjNjI1Y2I3OGFkOTIxNDI6NjIyZjYxNDVkODMyYzk2YzJmZjVmZTYzNDFkODExNDY="
+        },
+        processData: false,
+        data: dados,        
+      }).done(function (response) {
+        console.log(response);
+      });
+    }
+
+</script>
+
 <section id="enviarDemanda" class="section-solid section-form">
     <div class="container">
         <div class="title-section">
@@ -27,7 +80,10 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn btn-success btn-lg">ENVIAR DEMANDA</button>
+                        <button 
+                            onclick="enviarEmail();"
+                            class="btn btn-success btn-lg"
+                            >ENVIAR DEMANDA</button>
                     </div>
 
                     <div class="feedback-envio">

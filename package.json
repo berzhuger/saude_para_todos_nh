@@ -13,5 +13,8 @@
     "hugo-bin": "^0.49.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-mailjet": "^3.3.1"
+  }
 }

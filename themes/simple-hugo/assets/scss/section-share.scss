@@ -3,12 +3,12 @@ $size-button: 48px;
 .section-share{
     padding-top: 0;
 
+    .wrapper-btns-share{
+        text-align: center;
+    }
 }
 
 .wrapper-btns-share{
-
-    text-align: center;
-
     .button-share-media{
         position: relative;
         display: inline-block;

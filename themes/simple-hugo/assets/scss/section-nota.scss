@@ -1,0 +1,41 @@
+.jumbotron{
+    background: $yellow-theme;
+    background: #e67e22;
+    text-align: center;
+    border-radius: 0;
+
+    h3{
+        a{
+            color: #fff;
+
+            &:hover{
+                text-decoration: none;
+                opacity: .5;
+            }
+        }
+    }
+    h4{
+        color: #fff;
+        margin: .6em 0;   
+        
+        span{
+            display: inline-block;
+            background: #fff;
+            padding: .4em .6em;
+            color: #e67e22;
+        }
+    }
+    p{
+        font-size: 1.2em;
+        margin-bottom: 1.2em;
+
+        a{
+            color: #fff;
+
+            &:hover{
+                text-decoration: none;
+                opacity: .5;
+            }
+        }
+    }
+}

@@ -1,4 +1,32 @@
+@mixin style-link{
+    a{
+        display: inline-block;
+        position: relative;
+
+        &:hover{
+            opacity: 1;
+
+            &:before{
+                height: .8em;
+            }
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: .4em;
+            width: 100%;
+            left: 0;
+            background: $yellow-theme;
+
+            z-index: -1;
+        }
+    }
+}
+
 .section-demandas{
+    
     article{
 
         @include media-breakpoint-up(lg){
@@ -60,32 +88,7 @@
                 color: $blue-theme;
             }
             
-            @mixin style-link{
-                a{
-                    display: inline-block;
-                    position: relative;
-
-                    &:hover{
-                        opacity: 1;
-
-                        &:before{
-                            height: .8em;
-                        }
-                    }
-
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        bottom: 0;
-                        height: .4em;
-                        width: 100%;
-                        left: 0;
-                        background: $yellow-theme;
-
-                        z-index: -1;
-                    }
-                }
-            }
+           
 
             p, ul li{@include style-link();}
 
@@ -166,6 +169,8 @@
                 }
 
             }
+
+
             // &:nth-child(even){
             //     span{
             //         &::before{
@@ -174,14 +179,14 @@
             //     }
             // }
 
-            a{
+            & > a{
                 @include style-item();
                 transition: all .3s ease;
                 &:hover{text-decoration: none;opacity: .45;}
             }
 
             &.bg-solid{
-                a{
+                & > a{
                     color: #fff;
                     @include bg-theme-reverse;
                 }
@@ -192,6 +197,10 @@
                         @include bg-theme;
                     }
                 }
+            }
+
+            ul li{
+                @include style-link();
             }
 
         }

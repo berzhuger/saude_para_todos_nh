@@ -18,8 +18,10 @@ $yellow-theme: #f9ca24;
 @import './bootstrap/bootstrap';
 // END Bootstrap
 
+@import 'modal-text';
 @import 'modal-form';
 @import 'sections';
+@import 'section-nota';
 @import 'section-demandas';
 @import 'section-form';
 @import 'section-infos';

@@ -55,7 +55,7 @@ $(document).ready(function(){
   buttonsShare();
 
   //$('#modalForm').modal('show')
-  $('#modalNota0704').modal('show')
+  //$('#modalNota0704').modal('show')
 });
 
 

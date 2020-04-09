@@ -135,13 +135,7 @@
             background: #fff;
             color: #555;
 
-            h3{
-                //font-size: 1.2em;
-                color: $blue-theme;
-            }
-            p{
-                //font-size: .92em;
-            }
+            h3{color: $blue-theme;}           
 
         }
 
@@ -169,35 +163,12 @@
                 }
 
             }
-
-
-            // &:nth-child(even){
-            //     span{
-            //         &::before{
-            //             background: $red-theme;
-            //         }
-            //     }
-            // }
-
+         
             & > a{
                 @include style-item();
                 transition: all .3s ease;
                 &:hover{text-decoration: none;opacity: .45;}
-            }
-
-            &.bg-solid{
-                & > a{
-                    color: #fff;
-                    @include bg-theme-reverse;
-                }
-                &:nth-child(even){
-                    a{
-                        background: $red-theme;
-    
-                        @include bg-theme;
-                    }
-                }
-            }
+            }         
 
             ul li{
                 @include style-link();

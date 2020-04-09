@@ -1,7 +1,67 @@
 {{ define "main" }}
 
 {{ partial "home/section-nota" }}
-{{ partial "home/section-demandas" }}
+<!-- {{ partial "home/section-demandas" }} -->
+
+<section id="demandas" class="section-demandas">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <article>
+                    <div class="thumb-article">
+                        <img src="images/card_01.png" alt="">
+                    </div>
+
+                    <div class="content-article">
+                        <h3>RENDA BÁSICA EMERGENCIAL</h3>
+                        <p>
+                            Renda básica emergencial para trabalhadores desempregados, autônomos, informais e para
+                            beneficiárias do Programa Bolsa Família
+                        </p>
+                        <ul>
+                            <li>Responsabilidade do Governo Federal</li>
+                            <li>Já atendida faltando regulamentar</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 d-flex">
+                <article class="right">
+                    <div class="content-article ">
+
+                        <h3>FORTALECIMENTO DO SUS</h3>
+                        <p>Garantia de atendimento à suspeitos e confirmados de infecção </p>
+                        <ul>
+                        <li>Responsabilidade dos governos Municipal, Estadual e Federal</li>                       
+                        <li>Ação imediata: construção emergencial de hospitais de campanha e “zonas de isolamento” em equipamentos públicos (FENAC, escolas, ginásios, etc.)</li>
+
+                    </div>
+                    <div class="thumb-article">
+                        <img src="images/card_02.png" alt="">
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section-demanda-list">
+    <div class="container">
+        <ul class="list-articles d-flex">
+            {{ range .Site.RegularPages.ByTitle }}
+            <li>
+                <span>{{ .Content}}</span>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</section>
+
+
 {{ partial "home/section-form" }}
 {{ partial "home/section-infos" }}
 {{ partial "home/section-share" }}

@@ -4,6 +4,7 @@
 {{- if $title }}{{ $title = print $title " - " .Site.Title }}{{else}}{{$title = .Site.Title}}{{end}}
 {{- $description := .Params.meta.description }}
 <title>{{ $title }}</title>
+<meta property="og:image" content="http://saudeparatodosnh.com.br/images/shared_image.jpg" />
 {{ range .Params.meta.tags }}{{if (and .name .content) }}<meta name="{{ chomp .name}}" content="{{ chomp .content }}" />{{- end}}{{end}}
 {{with $description}}<meta name="description" content="{{.}}" />{{end}}
 <meta name="viewport" content="width=device-width, initial-scale=1" />

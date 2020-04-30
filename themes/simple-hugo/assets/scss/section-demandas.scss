@@ -169,9 +169,13 @@
                 transition: all .3s ease;
                 &:hover{text-decoration: none;opacity: .45;}
             }         
-
+            
             ul li{
                 @include style-link();
+                a{
+                    white-space: normal;
+                    word-break: break-all;
+                }
             }
 
         }
